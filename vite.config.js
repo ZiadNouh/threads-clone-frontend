@@ -8,7 +8,7 @@ export default defineConfig({
     // Get rid of the CORS error
     proxy: {
       "/api": {
-        target: "https://threads-clone-backend-fqmz.onrender.com/",
+        target: "https://threads-clone-backend-fqmz.onrender.com",
         changeOrigin: true,
         secure: false,
       },
