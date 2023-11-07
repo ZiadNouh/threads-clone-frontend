@@ -38,13 +38,16 @@ export default function UpdateProfilePage() {
     if (updating) return;
     setUpdating(true);
     try {
-      const res = await fetch(`/api/users/update/${user._id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ ...inputs, profilePic: imgUrl }),
-      });
+      const res = await fetch(
+        `https://threads-clone-backend-fqmz.onrender.com/api/users/update/${user._id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ ...inputs, profilePic: imgUrl }),
+        }
+      );
       const data = await res.json(); // updated user object
       if (data.error) {
         showToast("Error", data.error, "error");
