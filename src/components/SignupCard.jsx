@@ -37,14 +37,12 @@ export default function SignupCard() {
 
   const handleSignup = async () => {
     try {
-      const token = localStorage.getItem("user-threads-token"); // Retrieve the user's token from local storage
       const res = await fetch(
         "https://threads-clone-backend-fqmz.onrender.com/api/users/signup",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`, // Include the token in the "Authorization" header
           },
           body: JSON.stringify(inputs),
         }
