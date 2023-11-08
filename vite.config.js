@@ -8,3 +8,20 @@ export default defineConfig({
     outDir: "build", // Specify the desired output directory
   },
 });
+
+// https://vitejs.dev/config/
+// export default defineConfig({
+//   plugins: [react()],
+//   server: {
+//     port: 3000,
+
+//     // Get rid of the CORS error
+//     proxy: {
+//       "/api": {
+//         target: "https://threads-clone-backend-fqmz.onrender.com",
+//         changeOrigin: true,
+//         secure: false,
+//       },
+//     },
+//   },
+// });
