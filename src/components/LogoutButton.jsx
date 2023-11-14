@@ -10,15 +10,12 @@ export const LogoutButton = () => {
   const showToast = useShowToast();
   const handleLogout = async () => {
     try {
-      const res = await fetch(
-        "https://threads-clone-backend-fqmz.onrender.com/api/users/logout",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const res = await fetch("/api/users/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       const data = await res.json();
       console.log(data);
 
