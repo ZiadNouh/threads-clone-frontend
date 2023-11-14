@@ -46,6 +46,7 @@ const Actions = ({ post }) => {
           post._id,
         {
           method: "PUT",
+          credentials: "include", // Include cookies
           headers: {
             "Content-Type": "application/json",
           },
@@ -97,6 +98,7 @@ const Actions = ({ post }) => {
           post._id,
         {
           method: "PUT",
+          credentials: "include", // Include cookies
           headers: {
             "Content-Type": "application/json",
           },

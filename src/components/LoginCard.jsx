@@ -41,6 +41,7 @@ export default function LoginCard() {
         "https://threads-clone-backend-fqmz.onrender.com/api/users/login",
         {
           method: "POST",
+          credentials: "include", // Include cookies
           headers: {
             "Content-Type": "application/json",
           },

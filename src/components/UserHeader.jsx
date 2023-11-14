@@ -56,6 +56,7 @@ export const UserHeader = ({ user }) => {
         `https://threads-clone-backend-fqmz.onrender.com/api/users/follow/${user._id}`,
         {
           method: "POST",
+          credentials: "include", // Include cookies
           headers: {
             "Content-Type": "application/json",
           },

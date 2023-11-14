@@ -21,7 +21,10 @@ const UserPage = () => {
       setFetchingPosts(true);
       try {
         const res = await fetch(
-          `https://threads-clone-backend-fqmz.onrender.com/api/posts/user/${username}`
+          `https://threads-clone-backend-fqmz.onrender.com/api/posts/user/${username}`,
+          {
+            credentials: "include", // Include cookies
+          }
         );
         const data = await res.json();
         // console.log(data);

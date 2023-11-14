@@ -23,7 +23,10 @@ const Post = ({ post, postedBy }) => {
       try {
         const res = await fetch(
           "https://threads-clone-backend-fqmz.onrender.com/api/users/profile/" +
-            postedBy
+            postedBy,
+          {
+            credentials: "include", // Include cookies
+          }
         );
         const data = await res.json();
         if (data.error) {
@@ -49,6 +52,7 @@ const Post = ({ post, postedBy }) => {
         `https://threads-clone-backend-fqmz.onrender.com/api/posts/${post._id}`,
         {
           method: "DELETE",
+          credentials: "include", // Include cookies
         }
       );
       const data = await res.json();

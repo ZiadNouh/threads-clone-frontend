@@ -41,6 +41,7 @@ export default function SignupCard() {
         "https://threads-clone-backend-fqmz.onrender.com/api/users/signup",
         {
           method: "POST",
+          credentials: "include", // Include cookies
           headers: {
             "Content-Type": "application/json",
           },

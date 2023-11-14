@@ -42,6 +42,7 @@ export default function UpdateProfilePage() {
         `https://threads-clone-backend-fqmz.onrender.com/api/users/update/${user._id}`,
         {
           method: "PUT",
+          credentials: "include", // Include cookies
           headers: {
             "Content-Type": "application/json",
           },

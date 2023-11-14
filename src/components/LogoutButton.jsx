@@ -14,6 +14,7 @@ export const LogoutButton = () => {
         "https://threads-clone-backend-fqmz.onrender.com/api/users/logout",
         {
           method: "POST",
+          credentials: "include", // Include cookies
           headers: {
             "Content-Type": "application/json",
           },

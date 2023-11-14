@@ -61,6 +61,7 @@ const CreatePost = () => {
         "https://threads-clone-backend-fqmz.onrender.com/api/posts/create",
         {
           method: "POST",
+          credentials: "include", // Include cookies
           headers: {
             "Content-Type": "application/json",
           },

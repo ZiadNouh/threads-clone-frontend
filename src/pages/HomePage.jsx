@@ -16,7 +16,10 @@ const HomePage = () => {
       setPosts([]);
       try {
         const res = await fetch(
-          "https://threads-clone-backend-fqmz.onrender.com/api/posts/feed"
+          "https://threads-clone-backend-fqmz.onrender.com/api/posts/feed",
+          {
+            credentials: "include", // Include cookies
+          }
         );
         const data = await res.json();
         if (data.error) {

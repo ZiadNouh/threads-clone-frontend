@@ -35,7 +35,10 @@ const PostPage = () => {
       setPosts([]);
       try {
         const res = await fetch(
-          `https://threads-clone-backend-fqmz.onrender.com/api/posts/${pid}`
+          `https://threads-clone-backend-fqmz.onrender.com/api/posts/${pid}`,
+          {
+            credentials: "include", // Include cookies
+          }
         );
         const data = await res.json();
         if (data.error) {
@@ -58,6 +61,7 @@ const PostPage = () => {
         `https://threads-clone-backend-fqmz.onrender.com/api/posts/${currentPost._id}`,
         {
           method: "DELETE",
+          credentials: "include", // Include cookies
         }
       );
       const data = await res.json();

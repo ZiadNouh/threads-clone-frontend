@@ -12,7 +12,10 @@ const useGetUserProfile = () => {
     const getUser = async () => {
       try {
         const res = await fetch(
-          `https://threads-clone-backend-fqmz.onrender.com/api/users/profile/${username}`
+          `https://threads-clone-backend-fqmz.onrender.com/api/users/profile/${username}`,
+          {
+            credentials: "include", // Include cookies
+          }
         );
         const data = await res.json();
         if (data.error) {
